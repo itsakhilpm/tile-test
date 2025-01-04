@@ -5,28 +5,25 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { CardContentHeading, StyledCard, StyledCardContent, StyledCardMedia } from './styles';
 
-export default function MediaCard() {
+const MediaCard : React.FC<{ title: string; description: string }> = ({ title, description }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
+    <StyledCard>
+      <StyledCardMedia
+        sx={{ height: 60 }}
+        image="https://placehold.co/60x60"
         title="green iguana"
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
+      <StyledCardContent>
+        <CardContentHeading gutterBottom variant="h5" component="div">
+          {title}
+        </CardContentHeading>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {description}
         </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+      </StyledCardContent>
+    </StyledCard>
   );
 }
+export default MediaCard;

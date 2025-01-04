@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import { Box, Typography, AppBar, Toolbar, Button, Container, AppBarProps } from '@mui/material';
+import { Box, AppBar, Container, AppBarProps } from '@mui/material';
 export const StyledLayout = styled(Box)({
     display: 'flex',
     flexDirection: 'column',
@@ -8,7 +8,8 @@ export const StyledLayout = styled(Box)({
 
 // Styled header
 export const StyledHeader = styled(AppBar)<AppBarProps>({
-    backgroundColor: '#3f51b5',
+    backgroundColor: '#fff',
+    color: '#1f1f1f',
 });
 
 // Footer container
